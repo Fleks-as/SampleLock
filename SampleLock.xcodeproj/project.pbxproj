@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8607E43E8CE57F6D40ADB695 /* Pods_SampleLock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E2A52766CC340E4B82B0CB /* Pods_SampleLock.framework */; };
+		97ACD2CF1FA1DDA30070387B /* unlock.wav in Resources */ = {isa = PBXBuildFile; fileRef = 97ACD2CD1FA1DDA20070387B /* unlock.wav */; };
+		97ACD2D01FA1DDA30070387B /* lock.wav in Resources */ = {isa = PBXBuildFile; fileRef = 97ACD2CE1FA1DDA30070387B /* lock.wav */; };
 		97B2C6561F9FA116005D2685 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B2C6551F9FA116005D2685 /* AppDelegate.swift */; };
 		97B2C6581F9FA116005D2685 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B2C6571F9FA116005D2685 /* ViewController.swift */; };
 		97B2C65B1F9FA116005D2685 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97B2C6591F9FA116005D2685 /* Main.storyboard */; };
@@ -15,6 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		56E2A52766CC340E4B82B0CB /* Pods_SampleLock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleLock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		769DA75BB87287B667970A12 /* Pods-SampleLock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleLock.release.xcconfig"; path = "Pods/Target Support Files/Pods-SampleLock/Pods-SampleLock.release.xcconfig"; sourceTree = "<group>"; };
+		97ACD2CD1FA1DDA20070387B /* unlock.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = unlock.wav; sourceTree = "<group>"; };
+		97ACD2CE1FA1DDA30070387B /* lock.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lock.wav; sourceTree = "<group>"; };
+		97ACD2D21FA1DDE80070387B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		97B2C6521F9FA116005D2685 /* SampleLock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleLock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97B2C6551F9FA116005D2685 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97B2C6571F9FA116005D2685 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +30,7 @@
 		97B2C65C1F9FA116005D2685 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97B2C65F1F9FA116005D2685 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97B2C6611F9FA116005D2685 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C04775AB38EE017961B00952 /* Pods-SampleLock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleLock.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SampleLock/Pods-SampleLock.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +38,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8607E43E8CE57F6D40ADB695 /* Pods_SampleLock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9006A32A9AA3207B6C0A3C70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97ACD2D21FA1DDE80070387B /* AudioToolbox.framework */,
+				56E2A52766CC340E4B82B0CB /* Pods_SampleLock.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		97ACD2D11FA1DDA70070387B /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				97ACD2CE1FA1DDA30070387B /* lock.wav */,
+				97ACD2CD1FA1DDA20070387B /* unlock.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		97B2C6491F9FA116005D2685 = {
 			isa = PBXGroup;
 			children = (
 				97B2C6541F9FA116005D2685 /* SampleLock */,
 				97B2C6531F9FA116005D2685 /* Products */,
+				FF9D130E4BCEE5FFE943FFCB /* Pods */,
+				9006A32A9AA3207B6C0A3C70 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +84,7 @@
 		97B2C6541F9FA116005D2685 /* SampleLock */ = {
 			isa = PBXGroup;
 			children = (
+				97ACD2D11FA1DDA70070387B /* Sounds */,
 				97B2C6551F9FA116005D2685 /* AppDelegate.swift */,
 				97B2C6571F9FA116005D2685 /* ViewController.swift */,
 				97B2C6591F9FA116005D2685 /* Main.storyboard */,
@@ -64,6 +95,15 @@
 			path = SampleLock;
 			sourceTree = "<group>";
 		};
+		FF9D130E4BCEE5FFE943FFCB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C04775AB38EE017961B00952 /* Pods-SampleLock.debug.xcconfig */,
+				769DA75BB87287B667970A12 /* Pods-SampleLock.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +111,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 97B2C6641F9FA116005D2685 /* Build configuration list for PBXNativeTarget "SampleLock" */;
 			buildPhases = (
+				84C6FD7A1F3B307A85EE05DF /* [CP] Check Pods Manifest.lock */,
 				97B2C64E1F9FA116005D2685 /* Sources */,
 				97B2C64F1F9FA116005D2685 /* Frameworks */,
 				97B2C6501F9FA116005D2685 /* Resources */,
+				8195DC81BF70DA642C5597AB /* [CP] Embed Pods Frameworks */,
+				236368218417D4B414B6F162 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,13 +166,63 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97ACD2D01FA1DDA30070387B /* lock.wav in Resources */,
 				97B2C6601F9FA116005D2685 /* LaunchScreen.storyboard in Resources */,
 				97B2C65D1F9FA116005D2685 /* Assets.xcassets in Resources */,
+				97ACD2CF1FA1DDA30070387B /* unlock.wav in Resources */,
 				97B2C65B1F9FA116005D2685 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		236368218417D4B414B6F162 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SampleLock/Pods-SampleLock-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8195DC81BF70DA642C5597AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SampleLock/Pods-SampleLock-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84C6FD7A1F3B307A85EE05DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		97B2C64E1F9FA116005D2685 /* Sources */ = {
@@ -272,6 +365,7 @@
 		};
 		97B2C6651F9FA116005D2685 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C04775AB38EE017961B00952 /* Pods-SampleLock.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +381,7 @@
 		};
 		97B2C6661F9FA116005D2685 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 769DA75BB87287B667970A12 /* Pods-SampleLock.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
